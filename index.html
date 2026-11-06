@@ -19,14 +19,16 @@
         .navbar-inverse {
             background-color: #0b231e !important;
             border-color: #0b231e;
+            min-height: 50px;
         }
-        .sub-navbar {
-            background-color: #3a0b1e !important;
-            border: none;
-            margin-bottom: 20px;
+        .navbar-brand-logo img {
+            height: 35px;
+            margin-top: 8px;
         }
         hr.red {
             border-top: 3px solid #bc955c;
+            margin-top: 10px;
+            margin-bottom: 20px;
         }
         .headerTable {
             background-color: #12322b !important;
@@ -34,10 +36,12 @@
         }
         .headerTable th {
             color: white !important;
+            font-weight: 600;
         }
         .table-bordered > tbody > tr > th, 
         .table-bordered > tbody > tr > td {
             border: 1px solid #ddd;
+            padding: 8px;
         }
         @media print {
             header, footer, .noPrint {
@@ -53,7 +57,8 @@
             <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand-logo" href="https://www.gob.mx/">
-                        <img src="https://coronavirus.gob.mx/wp-content/uploads/2020/04/logo-gob-mx.svg" alt="gobierno de mexico" style="height: 35px; margin-top: 8px;">
+                        <!-- Logotipo oficial de gobierno actualizado -->
+                        <img src="https://raw.githubusercontent.com/gobmx/sistemas-base/master/img/logo_blanco.svg" alt="gobierno de mexico">
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarMainCollapse">
@@ -69,28 +74,31 @@
     <main role="main" style="margin-top: 90px;">
         <div id="cuerpo_principal" class="container">
             
-            <div class="row" style="margin-bottom: 15px;">
-                <div class="col-md-12">
-                    <img alt="Logo SHCP" src="https://www.gob.mx/cms/uploads/image/file/326848/Logo-Hacienda-SAT.jpg" style="height: 42px;">
-                    <div style="float: right; font-weight: bold; margin-top: 15px;">Versión 4.5.1</div>
+            <div class="row" style="margin-bottom: 15px; display: flex; align-items: center;">
+                <div class="col-xs-8 col-sm-9">
+                    <!-- Logotipo SHCP / SAT oficial -->
+                    <img alt="Logo SHCP" src="https://www.sat.gob.mx/bienvenida/PublishingImages/portal/logo_sat_cons.png" style="max-height: 45px; width: auto;">
+                </div>
+                <div class="col-xs-4 col-sm-3 text-right">
+                    <div style="font-weight: bold; font-size: 14px; color: #333;">Versión 4.5.1</div>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-md-12">
-                    <h3 class="titulo font-reduce reduce-titulo" style="color: #0b231e; font-weight: bold;">Verificación de comprobantes fiscales digitales por internet</h3>
+                    <h3 class="titulo font-reduce reduce-titulo" style="color: #0b231e; font-weight: bold; font-size: 22px;">Verificación de comprobantes fiscales digitales por internet</h3>
                 </div>
             </div>
 
             <hr class="red">
 
             <div id="verificaFolio" class="tab-content active">
-                <label class="control-label">A través de esta opción, usted podrá verificar si el comprobante fue certificado por el SAT</label>
+                <label class="control-label" style="font-weight: normal; font-size: 14px;">A través de esta opción, usted podrá verificar si el comprobante fue certificado por el SAT</label>
                 <br><br>
 
-                <div class="panel panel-default" style="padding: 20px; border-radius: 0;">
+                <div class="panel panel-default" style="padding: 20px; border-radius: 0; border: 1px solid #ddd; background: #fff;">
                     <div class="table-responsive">
-                        <table class="table table-bordered textosTablaPrint">
+                        <table class="table table-bordered textosTablaPrint" style="background-color: #fff;">
                             <tbody>
                                 <tr class="headerTable">
                                     <th scope="col">RFC del emisor</th>
@@ -134,7 +142,7 @@
 
                     <div class="clearfix" style="margin-top: 15px;">
                         <div class="pull-right">
-                            <button type="button" onclick="window.print();" class="btn btn-primary">Imprimir</button>
+                            <button type="button" onclick="window.print();" class="btn btn-primary" style="background-color: #337ab7; border-color: #2e6da4;">Imprimir</button>
                         </div>
                     </div>
                 </div>
